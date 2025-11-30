@@ -7,13 +7,13 @@ This project is designed for academic showcase, portfolio use, or real-world col
 ![Homepage](Screenshot/Home.png)
 
 ## About Us
-
-![About us](Screenshot/About us.png)
+![About us](Screenshot/Aboutus.png)
 
 ## Department
-
 ![Homepage](Screenshot/Department.png)
 
 ## Administrator
-
 ![Homepage](Screenshot/Administrator.png)
+
+## Light and Dark feature
+![Homepage](Screenshot/Home.png)
