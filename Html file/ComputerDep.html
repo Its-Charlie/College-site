@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Poppins', sans-serif;
+      }
+      
+      .wrapper1 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          background-color: #333;
+      }
+      
+      nav {
+          display: flex;
+          align-items: center;
+      }
+      
+      img {
+          width: 50px;
+          height: auto;
+      }
+      
+      ul {
+          display: flex;
+          align-items: center;
+      }
+      
+      li {
+          margin-right: 20px;
+      }
+      
+      a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 16px;
+          position: relative;
+          cursor: pointer;
+      }
+      
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #333;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          z-index: 1;
+          top: 100%;
+      }
+      
+      .dropdown-content a {
+          display: block;
+          padding: 10px;
+          color: #fff;
+          text-decoration: none;
+      }
+      
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+      
+      .bx {
+          font-size: 24px;
+          color: #fff;
+          cursor: pointer;
+      }
+      
+      
+      
+      .dropdown-content a:hover {
+          background-color: #555; /* Change the background color on hover */
+      }
+      .dropdown-content a.active {
+          background-color: #555;
+      }
+      
+      
+      
+      @media (max-width: 700px) {
+          .dropdown-content {
+              position: static;
+              background-color: #333;
+              display: none;
+          }
+      
+          .dropdown:hover .dropdown-content {
+              display: none;
+          }
+      
+          .wrapper1 {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+      
+          nav {
+              width: 100%;
+              margin-top: 10px;
+          }
+      
+          ul {
+              width: 100%;
+              flex-direction: column;
+          }
+      
+          li {
+              margin-bottom: 10px;
+          }
+      }
+      
+        </style>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Department - Your College</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="dep.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-----Header section-->
+    <section id="header">
+    
+     <div class="wrapper1">
+      <nav>
+          <img src="logo.jpg" alt="eduford logo">
+          <ul>
+              <i class='bx bx-window-close' onclick="hideMenu()"></i>
+              <li class="dropdown">
+                  <a href="index.html" onclick="hideMenu()" onclick="hideMenu()">HOME</a>
+                  <div class="dropdown-content">
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="about.html" onclick="hideMenu()">ABOUT</a>
+                  <div class="dropdown-content">
+                    <a href="chairmanmsg.html">Chairman's Message</a>
+                    <a href="secretarymsg.html">Secretary's Message</a>
+                    <a href="principalmsg.html">Principal's Message</a>
+                    <a href="organization.html">Organization Structure</a>
+                    <a href="feestructure.html">Fee Structure 2023-2024</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="Department.html" onclick="hideMenu()">DEPARTMENT</a>
+                  <div class="dropdown-content">
+                    <a href="ComputerDep.html">Computer Engineering</a>
+                    <a href="mechanical.html">Mechanical Engineering</a>
+                  <a href="AutomobileDep.html">Automobile Engineering</a>
+                  <a href="CivilDep.html">Civil Engineering</a>
+                  <a href="ITDep.html">Information Technology Engineering</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                <a a href="blog.html" onclick="hideMenu()">ADMINISTRATION</a>
+                <div class="dropdown-content">
+                  <a href="accountdepartment.html">Account Department</a>
+                  <a href="librarysiot.html">Central Library</a>
+                  <a href="Examsection.html">Exam Section</a>
+                </div>
+            </li>
+          
+            <li class="dropdown">
+              <a  a href="contact.html" onclick="hideMenu()">CONTACT</a>
+              <div class="dropdown-content">
+                  
+              </div>
+          </li>
+        </ul>
+      </nav>
+      <i class='bx bx-menu' onclick="toggleMenu()"></i>
+      </div>
+    </section>
+    <section id="sencond">
+            <div class="secondary-nav">
+                <nav>
+                    <ul>
+                        <li><a href="ComputerDep.html" onclick="highlightLink(this)">About Us</a></li>
+                        <li><a href="comfaculty.html" onclick="highlightLink(this)">Faculty</a></li>
+                        <li><a href="comptime.html" onclick="highlightLink(this)">Timetable</a></li>
+                        <li><a href="coacademic.html" onclick="highlightLink(this)">Academics</a></li>
+                        <li><a href="compevent.html" onclick="highlightLink(this)">Events</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </section>
+
+    <!-- Rest of your content -->
+    <section id="about">
+        <h2 id="c">Computer Departmnet</h2>
+            <img src="smita.JPG" alt="About Us Image" class="rotating-image1" id="rotatingImage">
+            <h2>About Us</h2>
+            <div class="center-text">
+                Computer Engineering Program at SIOT Kharghar 
+            </div>
+            <p class="left-justified">
+                One of Reputed Diploma Colleges in Navi Mumbai, stresses high accomplishment in principal information and practical critical thinking. We offer students a strong foundation in the central zones of Computer Science and introduction to front line computer advancements. SIOT is amongst well-known Diploma Colleges in Navi Mumbai. The computer Engineering program at SIOT stress high achievement. Computer Engineers draw foundation from the current branch of Electrical Engineering and Computer Science. Electrical Engineering stresses the theory and structure of equipment framework through a comprehension of electronic circuits, digital logic, and computer frameworks plan. Software engineering stresses the hypothesis and structure of huge programming frameworks that utilize PC equipment to take care of a wide range of issues.
+                <br>
+                <br>Demand for computer engineers is growing in both the computer industry and also in the other industries which rely heavily on computer-based systems. (Computer Engineering) program gives understudies a solid foundation in hardware and programming of engineering essentials. We offer an environment that gives small class sizes and individual thoughtfulness regarding understudies. No past computer experience is fundamental for understudies entering this program.
+            </p>                
+
+            <section id="features">
+                <h2 class="left-align">Key Features:</h2>
+                <div class="spaced-list">
+                    <p>Adequate computing facilities for hands-on experiments and learning.</p>
+                    <p>Qualified, experienced, and student-focused faculty.</p>
+                    <p>Interest-based exposure to industry, research, and higher examinations (ME, MS, MBA, etc.).</p>
+                    <p>Add-on courses for technical, communication, and aptitude skills.</p>
+                    <p>Individual monitoring of the progress of every student.</p>
+                </div>
+            </section>
+                 
+            <section id="vision">
+                <div class="spaced-list">
+                <h2>Vision</h2>
+                <p>“To contribute to society through excellence in scientific & knowledge-based education of computer science professionals”.</p>
+                </div>
+            </section>
+            
+            <section id="mission">
+                <div class="spaced-list">
+                <h2>Mission</h2>
+                
+                    <p>To transform students into technically competent, socially responsible, and ethical computer science professionals.</p>
+                    <p>To promote a creative teaching-learning process that will strive for academic excellence in the field of computer engineering.</p>
+                    <p>To enhance the technical expertise of students through workshops and industry-institute interaction.</p>
+                </div>
+            </section>
+            
+            <section id="program-outcomes">
+                <div class="spaced-list">
+                <h2>Program Outcomes (POs)</h2>
+                
+                <p>PO 1. Basic knowledge: Apply knowledge of basic mathematics, sciences, and basic engineering to solve the broad-based Computer engineering problem.</p>
+                <p>PO 2. Discipline knowledge: Apply Computer engineering discipline–specific knowledge to solve core computer engineering-related problems.</p>
+                <p>PO 3. Experiments and practice: Plan to perform experiments and practices to use the results to solve broad-based Computer engineering problems.</p>
+                <p>PO 4. Engineering tools: Apply relevant Computer technologies and tools with an understanding of the limitations.</p>
+                <p>PO 5. The engineer and society: Assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to practice in the field of Computer engineering.</p>
+                <p>PO 6. Environment and sustainability: Apply Computer engineering solutions for sustainable development practices in societal and environmental contexts and demonstrate the knowledge and need for sustainable development.</p>
+                <p>PO 7. Ethics: Apply ethical principles for commitment to professional ethics, responsibilities, and norms of practice in the field of Computer engineering.</p>
+                <p>PO 8. Individual and team work: Function effectively as a leader and team member in diverse/multidisciplinary teams.</p>
+                <p>PO 9. Communication: Communicate effectively in oral and written form.</p>
+                <p>PO 10. Life-long learning: Engage in independent and life-long learning activities in the context of technological changes in the Computer engineering field and allied industry.</p><!-- Repeat the pattern for each PO -->
+                </div>
+            </section>
+            
+            <section id="program-educational-objectives">
+                <div class="spaced-list">
+                <h2>Programme Educational Objectives (PEOs)</h2>
+                
+                <p>PEO 1. Provide socially responsible, environment-friendly solutions to Information technology-related broad-based problems adapting professional ethics.</p>
+                <p>PEO 2. Adapt state-of-the-art Computer engineering broad-based technologies to work in multidisciplinary work environments.</p>
+                <p>PEO 3. Solve broad-based problems individually and as a team member, communicating effectively in the world of work.</p>
+                <!-- Repeat the pattern for each PEO -->
+                </div>
+            </section>
+            
+            <section id="program-specific-outcomes">
+                <div class="spaced-list">
+                <h2>Program Specific Outcomes (PSOs)</h2>
+                
+                    <p>PSO 1. Use state-of-the-art technologies for the operation and application of computer software and hardware.</p>
+                    <p>PSO 2. Maintain computer engineering-related software and hardware systems.</p>
+                    <!-- Repeat the pattern for each PSO -->
+                </div>
+            </section>
+            
+            
+    
+
+            
+            
+
+    </section>
+    
+</body>
+</html>

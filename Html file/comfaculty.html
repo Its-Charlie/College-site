@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Poppins', sans-serif;
+      }
+      
+      .wrapper1 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          background-color: #333;
+      }
+      
+      nav {
+          display: flex;
+          align-items: center;
+      }
+      
+      img {
+          width: 50px;
+          height: auto;
+      }
+      
+      ul {
+          display: flex;
+          align-items: center;
+      }
+      
+      li {
+          margin-right: 20px;
+      }
+      
+      a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 16px;
+          position: relative;
+          cursor: pointer;
+      }
+      
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #333;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          z-index: 1;
+          top: 100%;
+      }
+      
+      .dropdown-content a {
+          display: block;
+          padding: 10px;
+          color: #fff;
+          text-decoration: none;
+      }
+      
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+      
+      .bx {
+          font-size: 24px;
+          color: #fff;
+          cursor: pointer;
+      }
+      
+      
+      
+      .dropdown-content a:hover {
+          background-color: #555; /* Change the background color on hover */
+      }
+      .dropdown-content a.active {
+          background-color: #555;
+      }
+      
+      
+      
+      @media (max-width: 700px) {
+          .dropdown-content {
+              position: static;
+              background-color: #333;
+              display: none;
+          }
+      
+          .dropdown:hover .dropdown-content {
+              display: none;
+          }
+      
+          .wrapper1 {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+      
+          nav {
+              width: 100%;
+              margin-top: 10px;
+          }
+      
+          ul {
+              width: 100%;
+              flex-direction: column;
+          }
+      
+          li {
+              margin-bottom: 10px;
+          }
+      }
+      
+        </style>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Department - Your College</title>
+    <link rel="stylesheet" href="faculty.css">
+    <script src="dep.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-----Header section-->
+    <section id="header">
+    
+     <div class="wrapper1">
+      <nav>
+          <img src="logo.jpg" alt="eduford logo">
+          <ul>
+              <i class='bx bx-window-close' onclick="hideMenu()"></i>
+              <li class="dropdown">
+                  <a href="index.html" onclick="hideMenu()" onclick="hideMenu()">HOME</a>
+                  <div class="dropdown-content">
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="about.html" onclick="hideMenu()">ABOUT</a>
+                  <div class="dropdown-content">
+                    <a href="chairmanmsg.html">Chairman's Message</a>
+                    <a href="secretarymsg.html">Secretary's Message</a>
+                    <a href="principalmsg.html">Principal's Message</a>
+                    <a href="organization.html">Organization Structure</a>
+                    <a href="feestructure.html">Fee Structure 2023-2024</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="Department.html" onclick="hideMenu()">DEPARTMENT</a>
+                  <div class="dropdown-content">
+                    <a href="ComputerDep.html">Computer Engineering</a>
+                    <a href="mechanical.html">Mechanical Engineering</a>
+                  <a href="AutomobileDep.html">Automobile Engineering</a>
+                  <a href="CivilDep.html">Civil Engineering</a>
+                  <a href="ITDep.html">Information Technology Engineering</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="blog.html" onclick="hideMenu()">ADMINISTRATION</a>
+                  <div class="dropdown-content">
+                    <a href="accountdepartment.html">Account Department</a>
+                    <a href="librarysiot.html">Central Library</a>
+                    <a href="Examsection.html">Exam Section</a>
+                  </div>
+              </li>
+             
+              <li class="dropdown">
+                <a  a href="contact.html" onclick="hideMenu()">CONTACT</a>
+                <div class="dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </li>
+          </ul>
+      </nav>
+      <i class='bx bx-menu' onclick="toggleMenu()"></i>
+      </div>
+    </section>
+    <section id="sencond">
+            <div class="secondary-nav">
+                <nav>
+                    <ul>
+                        <li><a href="ComputerDep.html" onclick="highlightLink(this)">About Us</a></li>
+                        <li><a href="comfaculty.html" onclick="highlightLink(this)">Faculty</a></li>
+                        <li><a href="comptime.html" onclick="highlightLink(this)">Timetable</a></li>
+                        <li><a href="coacademic.html" onclick="highlightLink(this)">Academics</a></li>
+                        <li><a href="compevent.html" onclick="highlightLink(this)">Events</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </section>
+    
+
+
+
+    <!-- Rest of your content -->
+    <section id="faculty">
+        <h2>Faculty Members</h2>
+        <div class="faculty-member">
+            <table class="faculty-table">
+                <tr>
+                    <td class="faculty-image">
+                        <img src="fsmita.jpg" alt="Faculty 1"style="width: 300px; height: 350px;">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td class="faculty-info">
+                        <h3>Mrs. Smita Kuldiwar</h3>
+                        <table>
+                            <tr>
+                                <td>Designation</td>
+                                <td>Incharge HOD</td>
+                            </tr>
+                            <tr>
+                                <td>Department</td>
+                                <td>Computer</td>
+                            </tr>
+                            <tr>
+                                <td>Date of Joining</td>
+                                <td>2/7/2018</td>
+                            </tr>
+                            <tr>
+                                <td>Qualification</td>
+                                <td>UG - BE(Information Technology), PG - ME(Computer)</td>
+                            </tr>
+                            <tr>
+                                <td>Total Experience</td>
+                                <td>Teaching - 7 years, Industry - 2 years</td>
+                            </tr>
+                            <tr>
+                                <td>Total Papers Published</td>
+                                <td>National-0, International - 1</td>
+                            </tr>
+                            <tr>
+                                <td>Research Interests</td>
+                                <td>Artificial Intelligence, Machine Learning</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="faculty-member">
+                
+            <table class="faculty-table">
+                <tr>
+                    <td class="faculty-image">
+                        <img src="komalmam.jpg" alt="Faculty 1"style="width: 300px; height: 350px;">
+                    </td>
+                <tr>
+                <tr>
+                   
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    
+                    <td class="faculty-info">
+                        <h3>Miss.Komal Jadhav</h3>
+                        <table>
+                            <tr>
+                                <td>Designation</td>
+                                <td>Lecturer</td>
+                            </tr>
+                            <tr>
+                                <td>Department</td>
+                                <td>Computer</td>
+                            </tr>
+                            <tr>
+                                <td>Date of Joining</td>
+                                <td> 19/09/2022</td>
+                            </tr>
+                            <tr>
+                                <td>Qualification</td>
+                                <td>B.E ( Computer)</td>
+                            </tr>
+                            <tr>
+                                <td>Total Experience</td>
+                                <td>Teaching - 7 years, Industry - 2 years</td>
+                            </tr>
+                            <tr>
+                                <td>Total Papers Published</td>
+                                <td>National-0
+                                International-1</td>
+                            </tr>
+                            <tr>
+                                <td>Research Interests</td>
+                                <td>Artificial Intelligence, Machine Learning</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="faculty-member">
+                
+                <table class="faculty-table">
+                    <tr>
+                        <td class="faculty-image">
+                            <img src="komalmam.jpg" alt="Faculty 1"style="width: 300px; height: 350px;">
+                        </td>
+                    <tr>
+                    <tr>
+                       
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        
+                        <td class="faculty-info">
+                            <h3>Mrs.Jyoti shinde</h3>
+                            <table>
+                                <tr>
+                                    <td>Designation</td>
+                                    <td>Lecturer</td>
+                                </tr>
+                                <tr>
+                                    <td>Department</td>
+                                    <td>Computer</td>
+                                </tr>
+                                <tr>
+                                    <td>Date of Joining</td>
+                                    <td> 01/02/2022</td>
+                                </tr>
+                                <tr>
+                                    <td>Qualification</td>
+                                    <td>B.E (Computer)</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Experience</td>
+                                    <td>Teaching - 5 years, Industry - 0 years</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Papers Published</td>
+                                    <td>National-
+                                    International-</td>
+                                </tr>
+                                <tr>
+                                    <td>Research Interests</td>
+                                    <td>Artificial Intelligence, Machine Learning</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+    </section>
+        
+
+    
+</body>
+</html>

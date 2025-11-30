@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+               * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.bx {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+.dropdown-content a:hover {
+    background-color: #555; /* Change the background color on hover */
+}
+.dropdown-content a.active {
+    background-color: #555;
+}
+
+
+
+@media (max-width: 700px) {
+    .dropdown-content {
+        position: static;
+        background-color: #333;
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .wrapper1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+      
+        </style>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Department SIOT</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="dep.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-----Header section-->
+    <section id="header">
+    
+     <div class="wrapper1">
+      <nav>
+          <img src="logo.jpg" alt="eduford logo">
+          <ul>
+              <i class='bx bx-window-close' onclick="hideMenu()"></i>
+              <li class="dropdown">
+                  <a href="index.html" onclick="hideMenu()" onclick="hideMenu()">HOME</a>
+                  <div class="dropdown-content">
+                  </div>
+              </li>
+              <li class="dropdown">
+                <a a href="about.html" onclick="hideMenu()">ABOUT</a>
+                <div class="dropdown-content">
+                    <a href="chairmanmsg.html">Chairman's Message</a>
+                    <a href="secretarymsg.html">Secretary's Message</a>
+                    <a href="principalmsg.html">Principal's Message</a>
+                    <a href="organization.html">Organization Structure</a>
+                    <a href="feestructure.html">Fee Structure 2023-2024</a>
+                </div>
+            </li>
+              <li class="dropdown">
+                  <a a href="Department.html" onclick="hideMenu()">DEPARTMENT</a>
+                  <div class="dropdown-content">
+                    <a href="ComputerDep.html">Computer Engineering</a>
+                      <a href="mechanical.html">Mechanical Engineering</a>
+                    <a href="AutomobileDep.html">Automobile Engineering</a>
+                    <a href="CivilDep.html">Civil Engineering</a>
+                    <a href="ITDep.html">Information Technology Engineering</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="blog.html" onclick="hideMenu()">ADMINISTRATION</a>
+                  <div class="dropdown-content">
+                      <a href="#">Account Department</a>
+                      <a href="#">Central Library</a>
+                      <a href="#">Exam Section</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a  a href="blog.html" onclick="hideMenu()">BLOG</a>
+                  <div class="dropdown-content">
+                      <a href="#">Option 1</a>
+                      <a href="#">Option 2</a>
+                      <a href="#">Option 3</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                <a  a href="contact.html" onclick="hideMenu()">CONTACT</a>
+                <div class="dropdown-content">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                </div>
+            </li>
+          </ul>
+      </nav>
+      <i class='bx bx-menu' onclick="toggleMenu()"></i>
+      </div>
+    </section>
+    <section id="sencond">
+            <div class="secondary-nav">
+                <nav>
+                    <ul>
+                        <li><a href="CivilDep.html" onclick="highlightLink(this)">About Us</a></li>
+                        <li><a href="comfaculty.html" onclick="highlightLink(this)">Faculty</a></li>
+                        <li><a href="comptime.html" onclick="highlightLink(this)">Timetable</a></li>
+                        <li><a href="coacademic.html" onclick="highlightLink(this)">Academics</a></li>
+                        <li><a href="compevent.html" onclick="highlightLink(this)">Events</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </section>
+
+    <!-- Rest of your content -->
+    <section id="about">
+        <h2 id="c">Civil Department</h2>
+            <img src="smita.JPG" alt="About Us Image" class="rotating-image1" id="rotatingImage">
+            <h2>About Us</h2>
+            <div class="center-text">
+                Civil Engineering Program at SIOT Kharghar 
+            </div>
+            <p class="left-justified">
+                Civil engineering is an expert engineering branch that manages the plan, development, and upkeep of the physical and normally fabricated condition, including works like streets, spans, dams, and structures. Civil engineering is the second-most established engineering branch after military engineering. Civil engineering happens in the open segment from civil through to national government and in the private area from singular property holders through to universal organizations. SIOT Provides the best education for Civil Engineering Departments. That’s why We are amongst Top established Polytechnic Colleges in Mumbai for Civil Engineering.
+            </p>                
+
+            <section id="features">
+                <h2 class="left-align">Key Features:</h2>
+                <div class="spaced-list">
+                    <p>Spacious classrooms with adequate illumination & ventilation</p>
+                    <p>Well equipped laboratories with Back-up Power Supply</p>
+                    <p>Industrial Training Workshop & Visits.</p>
+                    <p>Site Visit</p>
+                    <p>Value-added training towards employable and entrepreneurial skills</p>
+                    <p>Printed notes for students</p>
+                    <p>Individual Student Mentoring Scheme.</p>
+                    <p>Students Amenities Center and Cafeteria</p>
+                    <p>Departmental Training & Placement Cell</p>
+                    <p>Eminent and experienced faculty</p>
+                    <p>Parents Meeting</p>
+                    <p>Modern Computer Center with Open Source Platform.</p>
+                    <p>Central Digital library & Departmental with abundant books, national & international journals</p>
+                    <p>Internet facility with WI-FI Enabled Campus</p>
+                    <p>Sports & Cultural facility</p>
+                    <p>Xerox & printing facility within college premises</p>
+                    <p>Auditorium Facility</p>
+                    <p>Lush green surroundings creating a healthy atmosphere for studies</p>
+                    <p>100% Placement Assistance</p>
+
+                </div>
+            </section>
+                 
+            <section id="vision">
+                <div class="spaced-list">
+                <h2>Vision</h2>
+                <p>“To impart quality technical education beneficial to industry and the society in the field of Civil Engineering.”</p>
+                </div>
+            </section>
+            
+            <section id="mission">
+                <div class="spaced-list">
+                <h2>Mission</h2>
+                
+                    <p>To arrange academic and technical expertise.</p>
+                    <p>To improve the practical knowledge of the student as per the current scenario of the industry.</p>
+                    <p>To make the students socially and ethically responsible.</p>
+                </div>
+            </section>
+            
+            <section id="program-outcomes">
+                <div class="spaced-list">
+                <h2>Program Outcomes (POs)</h2>
+                
+                <p>Spacious classrooms with adequate illumination & ventilation</p>
+                <p>Well equipped laboratories with Back-up Power Supply</p>
+                <p>Industrial Training Workshop & Visits.</p>
+                <p>Site Visit</p>
+                <p>Value-added training towards employable and entrepreneurial skills</p>
+                <p>Printed notes for students</p>
+                <p>Individual Student Mentoring Scheme.</p>
+                <p>Students Amenities Center and Cafeteria</p>
+                <p>Departmental Training & Placement Cell</p>
+                <p>Eminent and experienced faculty</p>
+                <p>Parents Meeting</p>
+                <p>Modern Computer Center with Open Source Platform.</p>
+                <p>Central Digital library & Departmental with abundant books, national & international journals</p>
+                <p>Internet facility with  WI-FI Enabled Campus</p>
+                <p>Sports & Cultural facility</p>
+                <p>Xerox & printing facility within college premises</p>
+                <p>Auditorium Facility</p>
+                <p>Lush green surroundings creating a healthy atmosphere for studies</p>
+                <p>100% Placement Assistance</p>
+                </div>
+            </section>
+            
+            <section id="program-educational-objectives">
+                <div class="spaced-list">
+                <h2>Programme Educational Objectives (PEOs)</h2>
+                
+                <p>PEO 1. Provide socially responsible, environment friendly solutions to Civil engineering related broad-based problems adapting professional ethics.</p>
+                <p>PEO 2. Adapt state-of-the-art Civil engineering broad-based technologies to work in multidisciplinary work environments.</p>
+                <p>PEO 3. Solve broad-based problems individually and as a team member communicating effectively in the world of work.</p>
+                <!-- Repeat the pattern for each PEO -->
+                </div>
+            </section>
+            
+            <section id="program-specific-outcomes">
+                <div class="spaced-list">
+                <h2>Program Specific Outcomes (PSOs)</h2>
+                
+                    <p>PSO 1. Construction Planning and Designing: Perform optimal civil engineering construction, planning and designing activities of desired quality at optimal cost.</p>
+                    <p>PSO 2. Construction Execution and Maintenance: Execute civil engineering construction and maintenance using relevant materials and equipment.</p>
+                    <!-- Repeat the pattern for each PSO -->
+                </div>
+            </section>
+            
+            
+    
+
+            
+            
+
+    </section>
+    
+</body>
+</html>

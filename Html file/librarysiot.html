@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Poppins', sans-serif;
+      }
+      
+      .wrapper1 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          background-color: #333;
+      }
+      
+      nav {
+          display: flex;
+          align-items: center;
+      }
+      
+      img {
+          width: 50px;
+          height: auto;
+      }
+      
+      ul {
+          display: flex;
+          align-items: center;
+      }
+      
+      li {
+          margin-right: 20px;
+      }
+      
+      a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 16px;
+          position: relative;
+          cursor: pointer;
+      }
+      
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #333;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          z-index: 1;
+          top: 100%;
+      }
+      
+      .dropdown-content a {
+          display: block;
+          padding: 10px;
+          color: #fff;
+          text-decoration: none;
+      }
+      
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+      
+      .bx {
+          font-size: 24px;
+          color: #fff;
+          cursor: pointer;
+      }
+      
+      
+      
+      .dropdown-content a:hover {
+          background-color: #555; /* Change the background color on hover */
+      }
+      .dropdown-content a.active {
+          background-color: #555;
+      }
+      
+      
+      
+      @media (max-width: 700px) {
+          .dropdown-content {
+              position: static;
+              background-color: #333;
+              display: none;
+          }
+      
+          .dropdown:hover .dropdown-content {
+              display: none;
+          }
+      
+          .wrapper1 {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+      
+          nav {
+              width: 100%;
+              margin-top: 10px;
+          }
+      
+          ul {
+              width: 100%;
+              flex-direction: column;
+          }
+      
+          li {
+              margin-bottom: 10px;
+          }
+      }
+      
+      
+        </style>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Department - Your College</title>
+    <link rel="stylesheet" href="library.css">
+    <script src="library.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-----Header section-->
+    <section id="header">
+    
+     <div class="wrapper1">
+      <nav>
+          <img src="logo.jpg" alt="eduford logo">
+          <ul>
+              <i class='bx bx-window-close' onclick="hideMenu()"></i>
+              <li class="dropdown">
+                  <a href="index.html" onclick="hideMenu()" onclick="hideMenu()">HOME</a>
+                  <div class="dropdown-content">
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="about.html" onclick="hideMenu()">ABOUT</a>
+                  <div class="dropdown-content">
+                    <a href="chairmanmsg.html">Chairman's Message</a>
+                    <a href="secretarymsg.html">Secretary's Message</a>
+                    <a href="principalmsg.html">Principal's Message</a>
+                    <a href="organization.html">Organization Structure</a>
+                    <a href="feestructure.html">Fee Structure 2023-2024</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="Department.html" onclick="hideMenu()">DEPARTMENT</a>
+                  <div class="dropdown-content">
+                    <a href="ComputerDep.html">Computer Engineering</a>
+                    <a href="mechanical.html">Mechanical Engineering</a>
+                  <a href="AutomobileDep.html">Automobile Engineering</a>
+                  <a href="CivilDep.html">Civil Engineering</a>
+                  <a href="ITDep.html">Information Technology Engineering</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                <a a href="blog.html" onclick="hideMenu()">ADMINISTRATION</a>
+                <div class="dropdown-content">
+                  <a href="accountdepartment.html">Account Department</a>
+                  <a href="librarysiot.html">Central Library</a>
+                  <a href="Examsection.html">Exam Section</a>
+                </div>
+            </li>
+          
+            <li class="dropdown">
+              <a  a href="contact.html" onclick="hideMenu()">CONTACT</a>
+              <div class="dropdown-content">
+                  
+              </div>
+          </li>
+        </ul>
+      </nav>
+      <i class='bx bx-menu' onclick="toggleMenu()"></i>
+      </div>
+    </section>
+    <!--
+    <section id="sencond">
+            <div class="secondary-nav">
+                <nav>
+                    <ul>
+                        <li><a href="ComputerDep.html" onclick="highlightLink(this)">About Us</a></li>
+                        <li><a href="comfaculty.html" onclick="highlightLink(this)">Faculty</a></li>
+                        <li><a href="comptime.html" onclick="highlightLink(this)">Timetable</a></li>
+                        <li><a href="coacademic.html" onclick="highlightLink(this)">Academics</a></li>
+                        <li><a href="compevent.html" onclick="highlightLink(this)">Events</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </section>-->    
+
+    <section>
+        <h2>Central Library</h2>
+            <p>
+                The Central Library of SIOT Kharghar was established in 2008. The library is semi-computerized from its inception. A wide variety of textbooks, handbooks, and national journals are available in the Reference Section. The Central Library at Top Polytechnic Colleges in Mumbai- SIOT provides a wide variety of textbooks, handbooks.
+            </p>
+            <br>
+            <p>
+                Library gives Internet, E-books, and Newspapers to all users. E-journal facility is also available providing a competitive edge to the students and staff.
+            </p>
+            <br>
+            <p>
+                The library is open from 8:00 am to 5:00 pm giving access to all the students, staff, and other office staff of the lobby, reference segment, and stack spaces.
+            </p>
+            <br>
+            <p>
+                In the entirety of our connections, we are guided by our fundamental beliefs like Knowledge, Service, Quality, Integrity, Respect, and Communication, goodness, discipline, responsibility, collaboration, and critical thinking.
+            </p> 
+        
+
+            <section id="another-section">
+                <div class="additional-images">
+
+                    <img src="lib1.jpg" alt="Image 1" class="rotating-image" id="rotatingImage2">
+                </div>
+            </section>
+
+       
+
+    
+    </section>
+
+    <!-- Rest of your content -->
+    <section id="faculty">
+        <h2> LIBRARY STAFF</h2>
+        <div class="faculty-member">
+            <table class="faculty-table">
+                <tr>
+                    <td class="faculty-image">
+                        <img src="Sachin yadav.webp" alt="Faculty 1"style="width: 300px; height: 350px;">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td class="faculty-info">
+                        <h3>Mr. Sachin yadav</h3>
+                        <table>
+                            <tr>
+                                <td>Designation</td>
+                                <td>Librarian</td>
+                            </tr>
+                            <tr>
+                                <td>Department</td>
+                                <td>	Library</td>
+                            </tr>
+                            <tr>
+                                <td>Date of Joining</td>
+                                <td>15/06/2007</td>
+                            </tr>
+                            <tr>
+                                <td>Qualification</td>
+                                <td>M.A.  M. Lib</td>
+                            </tr>
+                            <tr>
+                                <td>Total Experience</td>
+                                <td>16 Years</td>
+                            </tr>
+                           
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="faculty-member">
+            <table class="faculty-table">
+                <tr>
+                    <td class="faculty-image">
+                        <img src="pooja jadhav.webp" alt="Faculty 1"style="width: 300px; height: 350px;">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td class="faculty-info">
+                        <h3>Mrs. Pooja jadhav</h3>
+                        <table>
+                            <tr>
+                                <td>Designation</td>
+                                <td>Clerk</td>
+                            </tr>
+                            <tr>
+                                <td>Department</td>
+                                <td>	Library</td>
+                            </tr>
+                            <tr>
+                                <td>Date of Joining</td>
+                                <td>03/02/2023</td>
+                            </tr>
+                            <tr>
+                                <td>Qualification</td>
+                                <td>M.com</td>
+                            </tr>
+                            <tr>
+                                <td>Total Experience</td>
+                                <td>1 Years</td>
+                            </tr>
+                           
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+    </section>
+<section>
+    <h2 class="big-bold-heading">Library Resources</h2>
+    <table>
+        <tr>
+            <th>Particulars</th>
+            <th>Total No.</th>
+        </tr>
+        <tr>
+            <td>Total Books</td>
+            <td>8957</td>
+        </tr>
+        <tr>
+            <td>Total Volumes</td>
+            <td>8905</td>
+        </tr>
+        <tr>
+            <td>Total no of Title</td>
+            <td>1329</td>
+        </tr>
+        <tr>
+            <td>Book Bank Books</td>
+            <td>435</td>
+        </tr>
+        <tr>
+            <td>Marathi Books</td>
+            <td>52</td>
+        </tr>
+        <tr>
+            <td>Total Number Of Periodicals</td>
+            <td>Nat J1-15</td>
+        </tr>
+        <tr>
+            <td>Total no of CD</td>
+            <td>344</td>
+        </tr>
+        <tr>
+            <td>Total no of Newspapers</td>
+            <td>05</td>
+        </tr>
+        <tr>
+            <td>Total Cost of Books</td>
+            <td>Rs. 22,65,348.00/-</td>
+        </tr>
+        <tr>
+            <td>Total Cost of Journals</td>
+            <td>Rs. 51110</td>
+        </tr>
+    </table>
+</section>
+<section>
+    <h2 class="big-bold-heading">Library Resources</h2>
+    <table class="library-table" style="margin-top: 20px;">
+    <tr>
+        <th>Sr. No.</th>
+        <th>Course(s)</th>
+        <th>No. of titles of the books</th>
+        <th>Number of volumes</th>
+        <th>No. of national journals</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Civil Engg.</td>
+        <td>321</td>
+        <td>2198</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Computer Engg.</td>
+        <td>336</td>
+        <td>1727</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Information Technology</td>
+        <td>166</td>
+        <td>1356</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Mechanical Engg.</td>
+        <td>305</td>
+        <td>2045</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Automobile Engg.</td>
+        <td>37</td>
+        <td>185</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Applied Science &amp; Humanities</td>
+        <td>164</td>
+        <td>1394</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><strong>TOTAL</strong></td>
+        <td><strong>1329</strong></td>
+        <td><strong>8905</strong></td>
+        <td><strong>15</strong></td>
+    </tr>
+</table>
+</section>
+    
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Poppins', sans-serif;
+      }
+      
+      .wrapper1 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          background-color: #333;
+      }
+      
+      nav {
+          display: flex;
+          align-items: center;
+      }
+      
+      img {
+          width: 50px;
+          height: auto;
+      }
+      
+      ul {
+          display: flex;
+          align-items: center;
+      }
+      
+      li {
+          margin-right: 20px;
+      }
+      
+      a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 16px;
+          position: relative;
+          cursor: pointer;
+      }
+      
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #333;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          z-index: 1;
+          top: 100%;
+      }
+      
+      .dropdown-content a {
+          display: block;
+          padding: 10px;
+          color: #fff;
+          text-decoration: none;
+      }
+      
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+      
+      .bx {
+          font-size: 24px;
+          color: #fff;
+          cursor: pointer;
+      }
+      
+      
+      
+      .dropdown-content a:hover {
+          background-color: #555; /* Change the background color on hover */
+      }
+      .dropdown-content a.active {
+          background-color: #555;
+      }
+      
+      
+      
+      @media (max-width: 700px) {
+          .dropdown-content {
+              position: static;
+              background-color: #333;
+              display: none;
+          }
+      
+          .dropdown:hover .dropdown-content {
+              display: none;
+          }
+      
+          .wrapper1 {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+      
+          nav {
+              width: 100%;
+              margin-top: 10px;
+          }
+      
+          ul {
+              width: 100%;
+              flex-direction: column;
+          }
+      
+          li {
+              margin-bottom: 10px;
+          }
+      }
+      
+        </style>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Department - Your College</title>
+    <link rel="stylesheet" href="mechtime.css">
+    <script src="dep.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-----Header section-->
+    <section id="header">
+    
+     <div class="wrapper1">
+      <nav>
+          <img src="logo.jpg" alt="eduford logo">
+          <ul>
+              <i class='bx bx-window-close' onclick="hideMenu()"></i>
+              <li class="dropdown">
+                  <a href="index.html" onclick="hideMenu()" onclick="hideMenu()">HOME</a>
+                  <div class="dropdown-content">
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="about.html" onclick="hideMenu()">ABOUT</a>
+                  <div class="dropdown-content">
+                    <a href="chairmanmsg.html">Chairman's Message</a>
+                    <a href="secretarymsg.html">Secretary's Message</a>
+                    <a href="principalmsg.html">Principal's Message</a>
+                    <a href="organization.html">Organization Structure</a>
+                    <a href="feestructure.html">Fee Structure 2023-2024</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="Department.html" onclick="hideMenu()">DEPARTMENT</a>
+                  <div class="dropdown-content">
+                    <a href="ComputerDep.html">Computer Engineering</a>
+                    <a href="mechanical.html">Mechanical Engineering</a>
+                  <a href="AutomobileDep.html">Automobile Engineering</a>
+                  <a href="CivilDep.html">Civil Engineering</a>
+                  <a href="ITDep.html">Information Technology Engineering</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                <a a href="blog.html" onclick="hideMenu()">ADMINISTRATION</a>
+                <div class="dropdown-content">
+                  <a href="accountdepartment.html">Account Department</a>
+                  <a href="librarysiot.html">Central Library</a>
+                  <a href="Examsection.html">Exam Section</a>
+                </div>
+            </li>
+          
+            <li class="dropdown">
+              <a  a href="contact.html" onclick="hideMenu()">CONTACT</a>
+              <div class="dropdown-content">
+                  
+              </div>
+          </li>
+        </ul>
+      </nav>
+      <i class='bx bx-menu' onclick="toggleMenu()"></i>
+      </div>
+    </section>
+    <section id="sencond">
+            <div class="secondary-nav">
+                <nav>
+                    <ul>
+                        <li><a href="mechanical.html" onclick="highlightLink(this)">About Us</a></li>
+                        <li><a href="mechfaculty.html" onclick="highlightLink(this)">Faculty</a></li>
+                        <li><a href="mechtimetable.html" onclick="highlightLink(this)">Timetable</a></li>
+                        <li><a href="mechacademic.html" onclick="highlightLink(this)">Academics</a></li>
+                        <li><a href="mechevent.html" onclick="highlightLink(this)">Events</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </section>
+    
+    <section id="timetable">
+        <h2 class="big-bold-heading">Timetable TY</h2>
+        <div class="timetable-container">
+           <img src="mechtime.JPG" alt="timetable">
+        </div>
+    </section>
+    
+    <section id="timetable">
+        <h2 class="big-bold-heading">Timetable SY </h2>
+    <div class="timetable-container">
+       <img src="mechtimesy.JPG" alt="timetable">
+    </div>
+    </section>
+
+    <!-- Rest of your content -->
+
+    
+</body>
+</html>

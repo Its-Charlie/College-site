@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+     * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0; /* Remove default body margin */
+    }
+
+    .wrapper1 {
+        position: relative; /* Make the wrapper relative for absolute positioning */
+        padding: 10px;
+        background-color: transparent;
+        z-index: 2; /* Set z-index to be above the image */
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        width: 50px;
+        height: auto;
+    }
+
+    ul {
+        display: block;
+        align-items: center;
+    }
+
+    li {
+        margin-right: 20px;
+        color: black;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color:transparent;
+        z-index: 1;
+        top: 100%;
+        opacity: 0; 
+        transition: opacity 0.5s ease, transform 0.5s ease-in-out;
+    }
+
+    .dropdown-content a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .bx {
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #555; /* Change the background color on hover */
+    }
+
+    .dropdown-content a.active {
+        background-color: #555;
+    }
+
+    .a1 ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    color: black;
+    }
+
+    .a1 ul li:hover a {
+        text-decoration: underline;
+        color: #f44336; /* Change this to the desired hover color */
+    }
+
+    .a1 ol li:hover a {
+        text-decoration: underline;
+        color: #f44336;
+    }
+
+    .a1 li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    }
+
+    .a1 li::before {
+    content: '\2022'; /* Unicode character for bullet point */
+    color: #000000; /* Change color as needed */
+    font-size: 2.5em; /* Adjust the size as needed */
+    margin-right: 10px; /* Adjust spacing between bullet point and text */
+    }
+
+    .a1 li a {
+    display: block;
+    }
+
+    
+
+    @media (max-width: 700px) {
+        .dropdown-content {
+            position: static;
+            background-color: #333;
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: none;
+        }
+
+        .wrapper1 {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        nav {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        ul {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+  
+    </style>
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Muchiri Samuel">
+  <meta name="description" content="Simple multipage website">
+  <meta name="keywords" content="eduford,campus">
+  <link rel="stylesheet" href="style.css">
+  <title>Eduford University Website</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+</head>
+
+<body>
+  <!-----Header section-->
+  <section id="sub-header">
+    <div class="wrapper1">
+      <nav>
+        <img src="logo.jpg" alt="eduford logo" style="width: 100px; height:50px;
+        max-width:100%;">
+        <ul>
+            <i class='bx bx-window-close' onclick="hideMenu()"></i>
+            <li class="dropdown">
+                <a href="index.html" onclick="hideMenu()" onclick="hideMenu()">HOME</a>
+                <div class="dropdown-content">
+                </div>
+            </li>
+            <li class="dropdown">
+                <a a href="about.html" onclick="hideMenu()">ABOUT</a>
+                <div class="dropdown-content">
+                  <a href="chairmanmsg.html">Chairman's Message</a>
+                  <a href="secretarymsg.html">Secretary's Message</a>
+                  <a href="principalmsg.html">Principal's Message</a>
+                  <a href="organization.html">Organization Structure</a>
+                  <a href="feestructure.html">Fee Structure 2023-2024</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a a href="Department.html" onclick="hideMenu()">DEPARTMENT</a>
+                <div class="dropdown-content">
+                  <a href="ComputerDep.html">Computer Engineering</a>
+                  <a href="mechanical.html">Mechanical Engineering</a>
+                <a href="AutomobileDep.html">Automobile Engineering</a>
+                <a href="CivilDep.html">Civil Engineering</a>
+                <a href="ITDep.html">Information Technology Engineering</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a a href="blog.html" onclick="hideMenu()">ADMINISTRATION</a>
+                <div class="dropdown-content">
+                  <a href="accountdepartment.html">Account Department</a>
+                  <a href="librarysiot.html">Central Library</a>
+                  <a href="Examsection.html">Exam Section</a>
+                </div>
+            </li>
+           
+            </li>
+            <li class="dropdown">
+              <a  a href="contact.html" onclick="hideMenu()">CONTACT</a>
+              <div class="dropdown-content">
+                  
+              </div>
+          </li>
+        </ul>
+    </nav>
+    <i class='bx bx-menu' onclick="toggleMenu()"></i>
+  </div>
+    <h1>About Us</h1>
+  </section>
+  <!--About Us Info-->
+  <section id="aboutUsInfo">
+    <div class="wrappera1">
+      <div class="a1">
+        <h1>We are navi mumbai best institute</h1>
+        <p>Being one of the Best Polytechnic Colleges in Navi Mumbai, the main aim of the Saraswati Institute of Technology is to produce tomorrow’s competitive technological greenhorns so that they can meet the challenges ahead of today’s society. It is our goal to explore an individual’s talent, to sharpen their technical skills so as to compete with their own unknown incomparable abilities, and to shine in the realities of the future. Saraswati Institute of Technology is approved by the All India Council for Technical Education (AICTE) and the Directorate of Technical Education (DTE); recognized by the Government of Maharashtra and partnered to the Maharashtra State Board of Technical Education (MSBTE).
+
+
+          What makes us stand out and be one of the Best Polytechnic Colleges in Navi Mumbai is that we try to give a fulfilling and satisfying experience to our understudies. We at SIOT feel that the best education leads to the all-around development of an individual. We also stress the importance of extra-curricular activities and conduct various sports and cultural events throughout the year. Thorough advancement is accomplished with strong passionate remainder and individual prepping. The most important feature of the Saraswati Education Society and Saraswati Institute of Technology, which is quite different from other such organizations, is that it is based on the collective effort made by every individual, working with a spirit of teamwork, and this makes us as one of the Best Polytechnic Colleges in Navi Mumbai. Long-term planning, meaningful administration, and a dedicated and experienced workforce, a full-fledged library and well-equipped laboratories are a few of our strong points that are worth mentioning.
+          
+          All the current and up and coming organizations of the Saraswati Education’s Society are given extensive structures to suit gathering, study halls, staff rooms, drawing corridors, labs, workshop, library, computer center, amphitheater, conference halls, examination hall, a recreation center for staff and students, sports rooms, canteen, and placement cell. Being the Best Polytechnic College in Navi Mumbai, this college satisfies every need and wish of our students. The campus is incredibly working with a vibe of expert structure and greenery. There is a 24-hour backup along with Transportation provided to all nearby railway stations and pickup points..</p>
+        <button class="her-btn">Explore Now</button>
+      </div>
+      <div class="a1">
+        <img src="siot.jpg" alt="about image">
+      </div>
+    </div>
+  </section>
+  <!--Footer-->
+  <section id="about_us">
+    <div class="custom-shape-divider-bottom-1619278637">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+    <div class="wrapper7">
+      <h1>About Us</h1>
+      <p>For More Info Contact Us Via Our Social Media Accouts.</p>
+      <br>
+      <hr>
+      <br>
+      <div class="acc">
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxl-instagram'></i>
+        <i class='bx bxl-twitter'></i>
+        <i class='bx bxl-linkedin-square'></i>
+        <i class='bx bxl-youtube'></i>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!--Tribute-->
+  <div class="container">
+    <div class="copy">Copyright @ 2024</div>
+    <div class="designer" style="font-weight:900">Siot Official Website</div>
+    <div class="app">Design by <em style="color:greenyellow;">AAS</em></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          box-sizing: border-box;
+      }
+      
+      body {
+          font-family: 'Poppins', sans-serif;
+      }
+      
+      .wrapper1 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          background-color: #333;
+      }
+      
+      nav {
+          display: flex;
+          align-items: center;
+      }
+      
+      img {
+          width: 50px;
+          height: auto;
+      }
+      
+      ul {
+          display: flex;
+          align-items: center;
+      }
+      
+      li {
+          margin-right: 20px;
+      }
+      
+      a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 16px;
+          position: relative;
+          cursor: pointer;
+      }
+      
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #333;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          z-index: 1;
+          top: 100%;
+      }
+      
+      .dropdown-content a {
+          display: block;
+          padding: 10px;
+          color: #fff;
+          text-decoration: none;
+      }
+      
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+      
+      .bx {
+          font-size: 24px;
+          color: #fff;
+          cursor: pointer;
+      }
+      
+      
+      
+      .dropdown-content a:hover {
+          background-color: #555; /* Change the background color on hover */
+      }
+      .dropdown-content a.active {
+          background-color: #555;
+      }
+      
+      
+      
+      @media (max-width: 700px) {
+          .dropdown-content {
+              position: static;
+              background-color: #333;
+              display: none;
+          }
+      
+          .dropdown:hover .dropdown-content {
+              display: none;
+          }
+      
+          .wrapper1 {
+              flex-direction: column;
+              align-items: flex-start;
+          }
+      
+          nav {
+              width: 100%;
+              margin-top: 10px;
+          }
+      
+          ul {
+              width: 100%;
+              flex-direction: column;
+          }
+      
+          li {
+              margin-bottom: 10px;
+          }
+      }
+      
+        </style>
+      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Department - Your College</title>
+    <link rel="stylesheet" href="academic.css">
+    <script src="dep.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-----Header section-->
+    <section id="header">
+    
+     <div class="wrapper1">
+      <nav>
+          <img src="logo.jpg" alt="eduford logo">
+          <ul>
+              <i class='bx bx-window-close' onclick="hideMenu()"></i>
+              <li class="dropdown">
+                  <a href="index.html" onclick="hideMenu()" onclick="hideMenu()">HOME</a>
+                  <div class="dropdown-content">
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="about.html" onclick="hideMenu()">ABOUT</a>
+                  <div class="dropdown-content">
+                    <a href="chairmanmsg.html">Chairman's Message</a>
+                    <a href="secretarymsg.html">Secretary's Message</a>
+                    <a href="principalmsg.html">Principal's Message</a>
+                    <a href="organization.html">Organization Structure</a>
+                    <a href="feestructure.html">Fee Structure 2023-2024</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="Department.html" onclick="hideMenu()">DEPARTMENT</a>
+                  <div class="dropdown-content">
+                    <a href="ComputerDep.html">Computer Engineering</a>
+                    <a href="mechanical.html">Mechanical Engineering</a>
+                  <a href="AutomobileDep.html">Automobile Engineering</a>
+                  <a href="CivilDep.html">Civil Engineering</a>
+                  <a href="ITDep.html">Information Technology Engineering</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a a href="blog.html" onclick="hideMenu()">ADMINISTRATION</a>
+                  <div class="dropdown-content">
+                    <a href="accountdepartment.html">Account Department</a>
+                    <a href="librarysiot.html">Central Library</a>
+                    <a href="Examsection.html">Exam Section</a>
+                  </div>
+              </li>
+            
+              
+              <li class="dropdown">
+                <a  a href="contact.html" onclick="hideMenu()">CONTACT</a>
+                <div class="dropdown-content">
+                    
+                </div>
+            </li>
+          </ul>
+      </nav>
+      <i class='bx bx-menu' onclick="toggleMenu()"></i>
+      </div>
+    </section>
+    <section id="sencond">
+            <div class="secondary-nav">
+                <nav>
+                    <ul>
+                        <li><a href="ComputerDep.html" onclick="highlightLink(this)">About Us</a></li>
+                        <li><a href="comfaculty.html" onclick="highlightLink(this)">Faculty</a></li>
+                        <li><a href="comptime.html" onclick="highlightLink(this)">Timetable</a></li>
+                        <li><a href="coacademic.html" onclick="highlightLink(this)">Academics</a></li>
+                        <li><a href="compevent.html" onclick="highlightLink(this)">Events</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </section>
+    
+
+
+
+    <!-- Rest of your content -->
+
+    <h2 class="big-bold-heading">Academics</h2>
+        <table class="model-answer-table">
+            <tr>
+                <th colspan="7">Model Answer Paper FY1I</th>
+            </tr>
+            <tr>
+                <th>Sr. No</th>
+                <th>Subject Name</th>
+                <th>Abbreviation</th>
+                <th>Subject Code</th>
+                <th>Answer Key Winter-2018</th>
+                <th>Answer Key Summer-2019</th>
+                <th>Answer Key Winter-2019</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>English</td>
+                <td>ENG</td>
+                <td>22101</td>
+                <td>Winter-2018</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mathematics</td>
+                <td>AMS</td>
+                <td>22103</td>
+                <td>Winter-2018</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+
+        <table class="model-answer-table">
+            <tr>
+                <th colspan="7">Model Answer Paper FY2I</th>
+            </tr>
+            <tr>
+                <th>Sr. No</th>
+                <th>Subject Name</th>
+                <th>Abbreviation</th>
+                <th>Subject Code</th>
+                <th>Answer Key Summer-2018</th>
+                <th>Answer Key Winter-2018</th>
+                <th>Answer Key Winter-2019</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Element of Electrical Engineering</td>
+                <td>EEC</td>
+                <td>22215</td>
+                <td>Summer-2018</td>
+                <td>Winter-2018</td>
+                <td>Winter-2019</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Applied Mathematics</td>
+                <td>AMI</td>
+                <td>22224</td>
+                <td>Winter-2018</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Basic Electronics</td>
+                <td>BEC</td>
+                <td>22225</td>
+                <td>Summer-2018</td>
+                <td>Winter-2018</td>
+                <td>Winter-2019</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Programming in C</td>
+                <td>PIC</td>
+                <td>22226</td>
+                <td>Winter-2018</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+        
+        <table class="model-answer-table">
+            <tr>
+                <th colspan="6">Model Answer Paper SY3I</th>
+            </tr>
+            <tr>
+                <th>Sr. No</th>
+                <th>Subject Name</th>
+                <th>Abbreviation</th>
+                <th>Subject Code</th>
+                <th>Answer Key Summer-2019</th>
+                <th>Answer Key Winter-2019</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Object Oriented Programming Using C++</td>
+                <td>OOP</td>
+                <td>22316</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Data Structure Using C</td>
+                <td>DSU</td>
+                <td>22317</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Computer Graphics</td>
+                <td>CGR</td>
+                <td>22318</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Database Management System</td>
+                <td>DMS</td>
+                <td>22319</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Digital Techniques</td>
+                <td>DTE</td>
+                <td>22320</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+        
+
+
+
+
+
+        <table class="model-answer-table">
+            <tr>
+                <th colspan="6">Model Answer Paper FY4I</th>
+            </tr>
+            <tr>
+                <th>Sr. No</th>
+                <th>Subject Name</th>
+                <th>Abbreviation</th>
+                <th>Subject Code</th>
+                <th>Answer Key Summer-2019</th>
+                <th>Answer Key Winter-2019</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Java Programming</td>
+                <td>JPR</td>
+                <td>22412</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Software Engineering</td>
+                <td>SEN</td>
+                <td>22413</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Data Communication And Computer Network</td>
+                <td>DCC</td>
+                <td>22414</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Microprocessor</td>
+                <td>MIC</td>
+                <td>22415</td>
+                <td>Summer-2019</td>
+                <td>Winter-2019</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </table>
+
+
+    
+
+    
+</body>
+</html>
