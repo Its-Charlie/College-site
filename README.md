@@ -15,6 +15,3 @@ This project is designed for academic showcase, portfolio use, or real-world col
 ## Administrator
 ![Homepage](Screenshot/Administrator.png)
 
-## Light and Dark feature
-[Click here to watch the MP4](Screenshot/Run(1).mp4)
-
