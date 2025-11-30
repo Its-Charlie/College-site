@@ -16,4 +16,5 @@ This project is designed for academic showcase, portfolio use, or real-world col
 ![Homepage](Screenshot/Administrator.png)
 
 ## Light and Dark feature
-![Homepage](Screenshot/Home.png)
+[Click here to watch the MP4](Screenshot/Run(1).mp4)
+
